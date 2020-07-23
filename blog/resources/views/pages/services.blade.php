@@ -5,15 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
-
-       
+        <title>{{config('app.name','Blog')}}</title>
         
     </head>
     <body>
-        <div >
-         <h1>hello world</h1>
-           
-        </div>
+        <h1>Services</h1>
+        <p>This is the services page</p>
+      
     </body>
 </html>
