@@ -10,6 +10,7 @@
                 <li class="active"><a href="/">Home</a></li>
                 <li class="active"><a href="/about">About</a></li>
                 <li class="active"><a href="/services">Services</a></li>
+                <li class="active"><a href="/posts">Post</a></li>
             </ul>
 
         </div>
