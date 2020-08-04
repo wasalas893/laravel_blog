@@ -28,7 +28,7 @@ class PostsController extends Controller
 
 
         // new post ake udata anna daiii
-        $posts=Post::orderBy('title','desc')->get();  
+        $posts=Post::orderBy('created_at','desc')->get();  
         
 
 
@@ -58,7 +58,14 @@ class PostsController extends Controller
             'body'=>'required'
 
         ]);
-        return 123;
+        //create post database
+        $post=new Post;
+        $post->title=$request->input('title');
+        $post->body=$request->input('body');
+        $post->save();
+
+   return redirect('/posts')->with('success','Post created');
+
     }
 
     /**
