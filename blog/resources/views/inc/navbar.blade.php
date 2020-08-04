@@ -12,6 +12,9 @@
                 <li class="active"><a href="/services">Services</a></li>
                 <li class="active"><a href="/posts">Post</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/posts/create">Create Post</a></li>
+            </ul>
 
         </div>
     </div>

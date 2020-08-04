@@ -2,8 +2,9 @@
 
 
 @section('content')
-<h1>Create Post</h1>
-<form action="{{ action('PostsController@store') }}" method="POST" class="form-horizontal">
+
+<h1>Edit Post</h1>
+<form action="{{ action('PostsController@update',[$post->id]) }}" method="POST" class="form-horizontal">
     {{ csrf_field() }}
 
     <!-- Task Name -->
@@ -11,7 +12,9 @@
         <label for="task" class="col-sm-3 control-label">Title</label>
 
         <div class="col-sm-6">
-            <input type="text" name="title" id="task-name" class="form-control">
+        
+        <input type="text"  name="title" value="{{$post->title}}"  id="task-name" class="form-control">
+           
         </div>
     </div>
     <!-- Task Name -->
@@ -19,10 +22,16 @@
         <label for="task" class="col-sm-3 control-label">Body</label>
 
         <div class="col-sm-6">
-            <input type="text" name="body" id="task-name" class="form-control">
+        <input type="text" name="body" value="{{$post->body}}" id="task-name" class="form-control">
         </div>
     </div>
 
+
+    <!--aniwarenma demiya utuya-->
+    <input type="hidden" name="_method" value="PUT">
+
+
+    
     <!-- Add Task Button -->
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-6">
